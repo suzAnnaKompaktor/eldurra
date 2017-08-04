@@ -1,0 +1,17 @@
+{
+  "name": "eldurra",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "suzAnnaKom <kompaktorzsu@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
