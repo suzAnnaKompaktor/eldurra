@@ -188,16 +188,23 @@ ol.list-branches {
   }
 
   &.section-inverse {
-    background-color: #445287;
+    background-color: #55558E;
     color: @inverse-text-color;
 
     .container {
-      border-color: darken(#445287, 5%);
+      border-color: darken(#55558E, 5%);
     }
   }
 
   &.section-border {
     border-top: 3px solid @brand-secondary;
+  }
+
+  &.section-full-width {
+    .container {
+      background-color: transparent;
+      border:none;
+    }
   }
 }
 
@@ -398,13 +405,10 @@ ol.list-branches {
 
 #sectionLogin {
   .container {
-    background-color: #445287;
+    background-color: #55558E;
     color: @brand-secondary;
 
      .content-wrapper {
-        width: 40%;
-        margin-right: auto;
-        margin-left: auto;
         margin-top: 60px;
         margin-bottom: 120px;
         text-align: center;
@@ -422,6 +426,11 @@ ol.list-branches {
     .login-icon {
       margin-top: 40px;
     }
+  }
+
+  h3, .h3 {
+    color: @brand-secondary;
+    text-align: center;
   }
 }
 
