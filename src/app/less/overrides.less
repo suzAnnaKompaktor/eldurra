@@ -1,8 +1,6 @@
 h1, .h1, h2, .h2, h3, .h3 {
   display: inline-block;
-  border-bottom: 3px solid @text-color;
   padding-bottom: 8px;
-  font-weight: bold;
   text-transform: uppercase;
   &:after {
     display: block;
@@ -10,9 +8,20 @@ h1, .h1, h2, .h2, h3, .h3 {
   }
 }
 
+h2, .h2 {
+  font-weight: bold;
+  border-bottom: 3px solid @text-color;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
 .container {
   width: 100%;
-  max-width: 1372px;
+  max-width: 1352px;
 }
 
 .navbar {
@@ -23,12 +32,19 @@ h1, .h1, h2, .h2, h3, .h3 {
   text-shadow: -3px 4px 5px argb(rgba(red(#011b26), green(#011b26), blue(#011b26), 0.25));
   text-shadow: -3px 4px 5px rgba(red(#011b26), green(#011b26), blue(#011b26), 0.25);
   .transition(height .2s);
+  margin-bottom: 0;
 
   .navbar-nav {
     padding-top: @navbar-padding-vertical;
     >li >a {
       padding-top: 0;
       padding-bottom: 0;
+    }
+    li.active {
+      .btn {
+        color: #fff;
+        background-color: @btn-default-border;
+      }
     }
   }
 
@@ -52,6 +68,23 @@ h1, .h1, h2, .h2, h3, .h3 {
     .navbar-collapse {
       margin-top: 68px;
     }
+  }
+
+  .btn {
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff;
+      background-color: @btn-default-border;
+    }
+  }
+}
+
+.navbar-collapse {
+  background-color: #F6F8FC;
+
+  @media (min-width: @grid-float-breakpoint) {
+    background-color: transparent;
   }
 }
 
@@ -107,4 +140,26 @@ h1, .h1, h2, .h2, h3, .h3 {
     border-color: @brand-primary;
     border-width: 1px;
   }
+
+  .modal-icon {
+    .icon {
+      height: 95px;
+    }
+    padding-bottom: 10px;
+  }
+}
+
+.form-group.required {
+  position: relative;
+
+    &:after {
+      content:"*";
+      color:red;
+      display: block;
+      float: right;
+      position: absolute;
+      right: -20px;
+      top:0;
+      font-size: 1.5em;
+    }
 }

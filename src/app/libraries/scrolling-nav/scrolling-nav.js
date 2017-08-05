@@ -12,8 +12,10 @@ $(function() {
     $(document).on('click', 'a.page-scroll', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
+            scrollTop: $($anchor.attr('href')).offset().top - $(".navbar-fixed-top").height()
         }, 1500, 'easeInOutExpo');
+        $(this).closest('.nav').find('.active').removeClass('active');
+        $(this).closest('li').addClass('active');
         event.preventDefault();
     });
 });

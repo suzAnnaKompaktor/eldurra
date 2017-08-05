@@ -8,23 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title></title>
-    <meta name="description" content="">
-
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="shortcut icon" href="./images/favicon.ico" />
 
-    <script src="./libraries/jquery/jquery.js"></script>
-    <script src="./libraries/bootstrap/bootstrap.js"></script>
-    <script src="./libraries/jquery-appear/jquery.appear.js"></script>
-    <script src="./libraries/jquery-easing/jquery.easing.min.js"></script>
-    <script src="./libraries/scrolling-nav/scrolling-nav.js"></script>
-    <script src="./js/scroll.js"></script>
-    <script src="./js/animate.js"></script>
-
-    <!-- Web Fonts -->
+    <!-- Web Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Mada:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet">
 
@@ -37,7 +26,7 @@
 
   </head>
 
-  <body class="navbar-is-fixed-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <body class="navbar-is-fixed-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="70">
     <div id="page">
 
     <header id="navbar" role="banner" class="navbar navbar-default navbar-fixed-top">
@@ -47,8 +36,11 @@
             <img src="./images/logo.png" alt="" />
           </a>
           <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-          <button class="btn navbar-toggle collapsed hidden" data-toggle="collapse" data-target=".navbar-collapse">
-            <i class="icon icon-bars" aria-hidden="true"></i>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
         </div>
 
@@ -73,8 +65,38 @@
       <div class="section section-border" id="sectionLanding">
         <div class="container container-fluid">
           <div class="section-content">
-            <div class="content-wrapper animated bounceInLeft" data-appear-animation="bounceInLeft">
-              <p>إذا كنت تبحث عن الثقة والسرعة فسنكون عند حسن الظن دوماً</p>
+            <div class="content-wrapper row">
+              <div class="caption animated bounceInLeft">
+                <p>إذا كنت تبحث عن الثقة والسرعة فسنكون عند حسن الظن دوماً</p>
+              </div>
+              <div id="slider" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#slider" data-slide-to="1"></li>
+                    <li data-target="#slider" data-slide-to="2"></li>
+                    <li data-target="#slider" data-slide-to="3"></li>
+                  </ol>
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                      <img src="./images/slide_01.jpg" height="611" width="1346" alt="">
+                    </div>
+                    <div class="item">
+                      <img src="./images/slide_02.jpg" height="611" width="1346" alt="">
+                    </div>
+
+                    <div class="item">
+                      <img src="./images/slide_03.jpg" height="611" width="1346" alt="">
+                    </div>
+
+                    <div class="item">
+                      <img src="./images/slide_04.jpg" height="611" width="1346" alt="">
+                    </div>
+
+                  </div>
+                </div>
             </div>
           </div>
         </div>
@@ -171,9 +193,81 @@
         <div class="container container-fluid">
          <div class="section-content">
             <div class="content-wrapper">
-              <h2 class="border-alt">كتالوج الدرة</h2>
-              <p>يضم "كتالوج الدرة" شريحة واسعة من العمالة المختارة للعمل، حيث يوفر الكتالوج للعملاء العديد من الاختيارات، ويعتبر هذا الكتالوج بمثابة قاعدة بيانات يتاح للعميل تصفحه والاختيار منه بعد تسجيل الدخول وتثبيت شخصيته من خلال بيانات البطاقة المدنية.</p>
-              <p>     تضم كل صفحة من صفحات الكتالوج بيانات المرشح للعمل ويشمل ذلك: بياناته الشخصية (الاسم، الجنس، الجنسية، العمر، الديانة، الحالة الاجتماعية .. إلخ) ثم السمات الشخصية (المهارات اللغوية، الطول</p>
+               <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="tabCatalogue">
+                  <h2 class="border-alt"><a href="#tabSearchForm" data-toggle="tab">كتالوج الدرة</a></h2>
+                  <p>يضم "كتالوج الدرة" شريحة واسعة من العمالة المختارة للعمل، حيث يوفر الكتالوج للعملاء العديد من الاختيارات، ويعتبر هذا الكتالوج بمثابة قاعدة بيانات يتاح للعميل تصفحه والاختيار منه بعد تسجيل الدخول وتثبيت شخصيته من خلال بيانات البطاقة المدنية.</p>
+                  <p>     تضم كل صفحة من صفحات الكتالوج بيانات المرشح للعمل ويشمل ذلك: بياناته الشخصية (الاسم، الجنس، الجنسية، العمر، الديانة، الحالة الاجتماعية .. إلخ) ثم السمات الشخصية (المهارات اللغوية، الطول</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="tabSearchForm">
+                  <div class="col-sm-6 col-sm-offset-2">
+                    <h3><span class="fa fa-search fa-fw fa-2x"></span> Advanced search</h3>
+
+                    <form action="#" method="post" id="searchForm">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="age" name="age" placeholder="Age" />
+                      </div>
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option>Nationality</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option>Gender</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option>Marital Status</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option>Language</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option>Type</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group">
+                         <input type="submit" value="Search" class="btn btn-default" id="submitSearchForm" />
+                      </div>
+                    </form>
+
+                  </div>
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="tabSearchResults">
+                  <div class="col-md-8 col-sm-offset-2">
+                    <h3><span class="fa fa-search fa-fw fa-2x"></span> Advanced search results</h3>
+                    <table class="table table-bordered">
+                      <tbody>
+                        <tr>
+                          <td><img src="" width="87"></td>
+                          <td>63kg</td>
+                          <td>1m63</td>
+                          <td>available</td>
+                          <td><span class="glyphicon glyphicon-play-circle"></span></td>
+                          <td><span class="glyphicon glyphicon-ok"></span></td>
+                        </tr>
+                         <tr>
+                            <td><img src="" width="87"></td>
+                            <td>63kg</td>
+                            <td>1m63</td>
+                            <td>available</td>
+                            <td><span class="glyphicon glyphicon-play-circle"></span></td>
+                            <td><span class="glyphicon glyphicon-ok"></span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -182,9 +276,45 @@
       <div class="section" id="sectionWebshop">
         <div class="container container-fluid">
           <div class="section-content">
-            <div class="content-wrapper text-center">
-              <h2>سوق الدرة</h2>
-              <p><img src="./images/icon_webshop.png" width="164" data-appear-animation="fadeIn" /></p>
+            <div class="content-wrapper">
+
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="tabWebshop">
+                  <div class="content">
+                    <h2>سوق الدرة</h2>
+                    <p><a href="#tabCategories" data-toggle="tab"><img src="./images/icon_webshop.png" width="164" data-appear-animation="fadeIn" /></a></p>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="tabCategories">
+                  <div class="">
+                    <div class="col-sm-6">
+                      <ul class="list-categoories row">
+                        <li class="col-xs-4 cat_01"><a href="#">shoes</a></li>
+                        <li class="col-xs-4 cat_02"><a href="#">costumes</a></li>
+                        <li class="col-xs-4 cat_03"><a href="#">uniform</a></li>
+                        <li class="col-xs-4 cat_04"><a href="#">shoes</a></li>
+                        <li class="col-xs-4 cat_05"><a href="#">costumes</a></li>
+                        <li class="col-xs-4 cat_06"><a href="#">uniform</a></li>
+                        <li class="col-xs-4 cat_07"><a href="#">shoes</a></li>
+                        <li class="col-xs-4 cat_08"><a href="#">costumes</a></li>
+                        <li class="col-xs-4 cat_09"><a href="#">uniform</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="shop-content">
+                          <h4>uniform</h4>
+                          <div class="shop-image">
+                              <img src="./images/sdhfjsdf.jpg" height="180">
+                          </div>
+                          <div class="shop-desciption">
+                              Lorem ipsum dolor sit amet.
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -201,7 +331,7 @@
 
                   <p class="login-icon"><img src="./images/icon_login.png" height="120" width="120" data-appear-animation="fadeIn" /></p>
 
-                  <form action="#" method="post" id="loginForm" class="form-primary">
+                  <form action="/" method="post" id="loginForm" class="form-primary">
                     <div class="form-group">
                       <input type="text" class="form-control" id="username" name="username" placeholder="Username" />
                     </div>
@@ -221,25 +351,70 @@
 
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="tabRegister">
-                  <h2 class="border-alt">Registration</h2>
+                  <h3>Registration</h3>
 
                   <form action="#" method="post" id="registrationForm" class="form-primary">
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" required="true" />
-                      <span class="required">*</span>
+                    <div class="form-group required">
+                      <input type="text" class="form-control" id="regfirstname" name="regfirstname" placeholder="First Name" required="true" />
                     </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="lasttname" name="lastname" placeholder="Last Name" required="true" />
-                      <span class="required">*</span>
+                    <div class="form-group required">
+                      <input type="text" class="form-control" id="reglastname" name="reglastname" placeholder="Last Name" required="true" />
                     </div>
+                    <div class="form-group required">
+                      <input type="text" class="form-control" id="regusername" name="regusername" placeholder="Username" required="true" />
+                    </div>
+                    <div class="form-group required">
+                      <input type="password" class="form-control" id="regpassword" name="regpassword" placeholder="Password" required="true" />
+                    </div>
+                    <div class="form-group required">
+                      <input type="password" class="form-control" id="regconfirmpassword" name="regconfirmpassword" placeholder="Confirm Password" required="true" />
+                    </div>
+                    <div class="form-group required">
+                      <input type="email" class="form-control" id="regemail" name="regemail" placeholder="Email" required="true" />
+                    </div>
+
                     <div class="form-group">
                        <input type="submit" value="Create" class="btn btn-primary" id="submitRegistrationForm" />
                     </div>
                   </form>
 
                 </div>
-                <div role="tabpanel" class="tab-pane fade" id="tabNewPass">...</div>
-                <div role="tabpanel" class="tab-pane fade" id="tabRestorePass">...</div>
+                <div role="tabpanel" class="tab-pane fade" id="tabNewPass">
+                    <h3>Create a new password</h3>
+
+                    <form action="#" method="post" id="newPassForm" class="form-primary">
+                      <div class="form-group required">
+                        <input type="password" class="form-control" id="newpassword" name="newpassword" placeholder="Password" required="true" />
+                      </div>
+                      <div class="form-group required">
+                        <input type="password" class="form-control" id="newconfirmpassword" name="newconfirmpassword" placeholder="Confirm Password" required="true" />
+                      </div>
+
+                      <div class="form-group">
+                         <input type="submit" value="Submit" class="btn btn-primary" id="submitNewPassForm" />
+                      </div>
+                    </form>
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="tabChangePass">
+                    <h3>Create a new password</h3>
+
+                    <form action="#" method="post" id="changePassForm" class="form-primary">
+                      <div class="form-group required">
+                        <input type="password" class="form-control" id="changeoldpassword" name="changeoldpassword" placeholder="Old Password" required="true" />
+                      </div>
+                      <div class="form-group required">
+                        <input type="password" class="form-control" id="changepassword" name="changepassword" placeholder="New Password" required="true" />
+                      </div>
+                      <div class="form-group required">
+                        <input type="password" class="form-control" id="changeconfirmpassword" name="changeconfirmpassword" placeholder="Confirm New Passwordd" required="true" />
+                      </div>
+
+                      <div class="form-group">
+                         <input type="submit" value="Submit" class="btn btn-primary" id="submitChangePassForm" />
+                      </div>
+                    </form>
+                </div>
               </div>
 
             </div>
@@ -347,16 +522,17 @@
       </div>
     </footer>
 
-    <div class="modal fade" tabindex="-1" role="dialog" id="modalNewAccount">
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalLogin">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
+            <div class="modal-icon"><img src="./images/icon_lock.png" class="icon" /></div>
             <p><small>You are logged in</small></p>
             <h4>Create your own password</h4>
-            <a href="#">Continue</a>
+            <a href="#tabNewPass" data-toggle="tab" data-dismiss="modal">Continue</a>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -375,7 +551,7 @@
                 <input type="text" class="form-control" id="forgotPassEmail" name="email" placeholder="Email" />
               </div>
               <div class="form-group">
-                 <input type="submit" value="Submit" class="btn btn-default" id="forgotPassForm" />
+                 <input type="submit" value="Submit" class="btn btn-default" id="submitForgotPassForm" data-dismiss="modal" />
               </div>
             </form>
           </div>
@@ -384,6 +560,35 @@
     </div><!-- /.modal -->
 
   </div><!-- eof #page -->
+
+  <script src="./libraries/jquery/jquery.js"></script>
+  <script src="./libraries/bootstrap/bootstrap.js"></script>
+  <script src="./libraries/jquery-appear/jquery.appear.js"></script>
+  <script src="./libraries/jquery-easing/jquery.easing.min.js"></script>
+
+  <script src="./libraries/scrolling-nav/scrolling-nav.js"></script>
+  <script src="./js/scroll.js"></script>
+  <script src="./js/animate.js"></script>
+  <script src="./js/login.js"></script>
+  <script src="./js/catalogue.js"></script>
+  <script src="./js/webshop.js"></script>
+
+ <svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="0"
+   height="0"
+   id="svg4685">
+      <defs>
+          <clipPath id="maskMessage">
+              <path fill="#FFFFFF" stroke="#000000" stroke-width="1.5794" stroke-miterlimit="10" d="m 360.1071,-37.75607 0.0432,0 1012.4056,-0.64178 0,894.77178 L -44.652718,855.69565 -44,390.59348 -44,176.28581 z" />
+          </clipPath>
+      </defs>
+  </svg>
 
   </body>
 </html>
