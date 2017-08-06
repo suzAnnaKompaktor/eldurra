@@ -27,7 +27,6 @@
   </head>
 
   <body class="navbar-is-fixed-top">
-    <div id="page" class="subpage">
 
     <header id="navbar" role="banner" class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -60,10 +59,10 @@
       </div>
     </header>
 
-    <section role="main" class="main-container">
+    <section role="main" class="main-container subpage">
 
       <div class="section section-overlay section-full-width" id="sectionCatalogue">
-        <div class="container container-fluid">
+        <div class="container">
          <div class="section-content">
             <div class="content-wrapper">
                <div class="tab-content">
@@ -128,45 +127,6 @@
       </div>
     </footer>
 
-    <div class="modal fade" tabindex="-1" role="dialog" id="modalLogin">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          </div>
-          <div class="modal-body">
-            <div class="modal-icon"><img src="./images/icon_lock.png" class="icon" /></div>
-            <p><small>You are logged in</small></p>
-            <h4>Create your own password</h4>
-            <a href="#tabNewPass" data-toggle="tab" data-dismiss="modal">Continue</a>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div class="modal fade" tabindex="-1" role="dialog" id="modalForgotPass">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          </div>
-          <div class="modal-body">
-            <h4>Fill in your registered email address to reset your password</h4>
-           <form action="#" method="post" id="forgotPassForm">
-              <div class="form-group">
-                <input type="text" class="form-control" id="forgotPassEmail" name="email" placeholder="Email" />
-              </div>
-              <div class="form-group">
-                 <input type="submit" value="Submit" class="btn btn-default" id="submitForgotPassForm" data-dismiss="modal" />
-              </div>
-            </form>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-  </div><!-- eof #page -->
-
   <script src="./libraries/jquery/jquery.js"></script>
   <script src="./libraries/bootstrap/bootstrap.js"></script>
   <script src="./libraries/jquery-appear/jquery.appear.js"></script>
@@ -175,26 +135,8 @@
   <script src="./libraries/scrolling-nav/scrolling-nav.js"></script>
   <script src="./js/scroll.js"></script>
   <script src="./js/animate.js"></script>
-  <script src="./js/login.js"></script>
   <script src="./js/catalogue.js"></script>
-  <script src="./js/webshop.js"></script>
 
- <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   width="0"
-   height="0"
-   id="svg4685">
-      <defs>
-          <clipPath id="maskMessage">
-              <path fill="#FFFFFF" stroke="#000000" stroke-width="1.5794" stroke-miterlimit="10" d="m 360.1071,-37.75607 0.0432,0 1012.4056,-0.64178 0,894.77178 L -44.652718,855.69565 -44,390.59348 -44,176.28581 z" />
-          </clipPath>
-      </defs>
-  </svg>
 
   </body>
 </html>

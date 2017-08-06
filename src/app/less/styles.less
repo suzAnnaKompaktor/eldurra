@@ -19,10 +19,6 @@
     }
  }
 
- #page {
-  .clearfix();
- }
-
 a {
  .transition(all 0.20s linear);
 }
@@ -118,7 +114,6 @@ ol.list-branches {
      .title {
         display: block;
         clear: both;
-        margin-top: -10px;
         margin-bottom: 20px;
         border-top:1px solid @text-color;
      }
@@ -161,9 +156,10 @@ ol.list-branches {
     background-repeat: no-repeat;
     background-position: top center;
     background-color: #fff;
-    border-left: 3px solid #D7D5E0;
-    border-right: 3px solid #D7D5E0;
-    padding-top: 40px;
+    border-left: 2px solid #D7D5E0;
+    border-right: 2px solid #D7D5E0;
+    padding-top: floor((@grid-gutter-width / 2));
+    padding-bottom: floor((@grid-gutter-width / 2));
   }
 
   &.section-overlay {
@@ -210,9 +206,9 @@ ol.list-branches {
 
 #sectionLanding {
   .container {
-    /*background-image: url(../images/bg_s_landing.jpg);*/
-    padding-top: 0;
     position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
 
     &:before {
       content: "";
@@ -237,17 +233,23 @@ ol.list-branches {
         font-size: @font-size-large;
         position: absolute;
         top: 40%;
-        left: -40px;
+        left: -(floor((@grid-gutter-width / 2)));
         z-index: 1020;
         transform: translateY(-50%);
         padding: 50px 40px 50px 150px;
         max-width: 50%;
          #gradient.vertical(rgba(red(#473a7f), green(#473a7f), blue(#473a7f), 0.6); rgba(red(#172c71), green(#172c71), blue(#172c71), 0.6));
 
-         @media (max-width: @grid-float-breakpoint-max) {
-            top: 16%;
+         @media (max-width:@screen-md-max) {
+            top: 20%;
             padding: 25px 20px 20px 45px;
             max-width: 85%;
+         }
+
+          @media (max-width:@screen-sm-max) {
+            top: 20px;
+            padding: 20px;
+            max-width: 95%;
          }
       }
     }
@@ -266,7 +268,7 @@ ol.list-branches {
     padding-top: 2%;
     padding-left: 40%;
 
-     @media (max-width: @grid-float-breakpoint-max) {
+     @media (max-width: @screen-md-max) {
       background-size: 50%;
       padding-left: 35%;
      }
@@ -279,14 +281,13 @@ ol.list-branches {
     background-position: top center;
     background-size: cover;
     min-height: 405px;
-    padding-bottom: 40px;
 
     .content-wrapper {
       color: @text-color;
       background-color: rgba(red(#fff), green(#fff), blue(#fff), 0.8);
       margin-left: 0;
       margin-right: 0;
-      padding: 40px;
+      padding: floor((@grid-gutter-width / 2));
     }
   }
 }
@@ -297,7 +298,6 @@ ol.list-branches {
     background-position: top center;
     background-size: cover;
     min-height: 543px;
-    padding-bottom: 40px;
   }
 }
 
@@ -307,20 +307,19 @@ ol.list-branches {
     background-position: top right;
     height: 692px;
 
-    .content-wrapper {
+    .wrapper {
       background-color: rgba(red(#fff), green(#fff), blue(#fff), 0.8);
-      margin-right: 110px;
       margin-top: 143px;
       padding: 30px;
       max-height: 322px;
-      width: 80%;
+      text-align: center;
     }
   }
 
   .list-services {
-    margin-left: 40px;
-    margin-right: 80px;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
     .clearfix();
 
     > li {
@@ -348,8 +347,8 @@ ol.list-branches {
       height: 100%;
       width: 100%;
       min-height: 706px;
-      margin-top: -40px;
-      margin-right: -40px;
+      margin-top: -(floor((@grid-gutter-width / 2)));
+      margin-right: -(floor((@grid-gutter-width / 2)));
       padding-top: 20%;
       padding-right: 43%;
       background-position: top right;
@@ -383,7 +382,7 @@ ol.list-branches {
   #tabCategories {
     background-color: #fff;
     min-height: 694px;
-    margin: -40px;
+    margin: -(floor((@grid-gutter-width / 2)));
   }
 
   h2 {
@@ -416,7 +415,7 @@ ol.list-branches {
 
         form {
           text-align: left;
-          margin-top: 40px;
+          margin-top: floor((@grid-gutter-width / 2));
 
           a.forgot-password {
             text-decoration: underline;
@@ -425,7 +424,7 @@ ol.list-branches {
       }
 
     .login-icon {
-      margin-top: 40px;
+      margin-top: floor((@grid-gutter-width / 2));
     }
   }
 
@@ -439,13 +438,19 @@ ol.list-branches {
   .container {
     background-image: url(../images/bg_s_message.jpg);
     background-position: top left;
+    padding-bottom: 0;
 
     .section-content {
       background-color: rgba(red(#fff), green(#fff), blue(#fff), 0.8);
       -webkit-clip-path: url(#maskMessage);
       clip-path: url(#maskMessage);
-      padding: 40px;
-      margin-bottom: 40px;
+      padding: floor((@grid-gutter-width / 2));
+      margin-bottom: floor((@grid-gutter-width / 2));
+
+       @media (max-width: @screen-sm-max) {
+        padding: floor((@grid-gutter-width / 4));
+        padding-top: 80px;
+       }
 
       .content-wrapper {
         width: 70%;
@@ -455,7 +460,11 @@ ol.list-branches {
   }
 
   form {
-    margin-top: 40px;
+    margin-top: floor((@grid-gutter-width / 2));
+
+    @media (max-width: @screen-sm-max) {
+      margin-top: 0;
+    }
   }
 }
 
