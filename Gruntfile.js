@@ -50,10 +50,9 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'release/css',
+          cwd: '<%= config.path.app.root %>/css',
           src: ['*.css', '!*.min.css'],
-          dest: 'release/css',
-          ext: '.min.css'
+          dest: '<%= config.path.dist.root %>/css',
         }]
       }
     },
@@ -72,6 +71,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('default', ['copy', 'less', 'watch']);
+  grunt.registerTask('default', ['copy', 'less', 'watch', 'cssmin']);
 
 };
