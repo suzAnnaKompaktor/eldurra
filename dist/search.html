@@ -46,13 +46,13 @@
         <div class="navbar-collapse collapse">
           <nav role="navigation" class="">
             <ul class="menu nav navbar-nav">
-              <li><a href="./index.html#sectionContact" class="page-scroll">اتصل بن</a></li>
-              <li><a href="./index.html#sectionLogin" class="page-scroll">التسجيل</a></li>
-              <li><a href="./index.html#sectionWebshop" class="page-scroll">سوق الدرة</a></li>
-              <li class="active"><a href="./index.html#sectionCatalogue" class="page-scroll"> اكتالوج الدرة</a></li>
-              <li><a href="./index.html#sectionServices" class="page-scroll"> خدمتنا</a></li>
-              <li><a href="./index.html#sectionIntroduction" class="page-scroll"> نبذه عن الشركه</a></li>
-              <li><a href="./index.html#sectionLogin" class="page-scroll btn btn-default">Login</a></li>
+              <li><a href="#sectionContact" class="page-scroll">اتصل بنا</a></li>
+              <li><a href="#sectionLogin" class="page-scroll">التسجيل</a></li>
+              <li><a href="#sectionWebshop" class="page-scroll">سوق الدرة</a></li>
+              <li class="active"><a href="#sectionCatalogue" class="page-scroll">كتالوج الدره</a></li>
+              <li><a href="#sectionServices" class="page-scroll"> خدمتنا</a></li>
+              <li><a href="#sectionIntroduction" class="page-scroll"> نبذه عن الشركه</a></li>
+              <li><a href="#sectionLogin" class="page-scroll btn btn-default">تسجيل الدخول </a></li>
             </ul>
           </nav>
         </div>
@@ -67,44 +67,70 @@
             <div class="content-wrapper">
                <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="tabSearchForm">
-                  <div class="col-sm-6 col-sm-offset-2">
-                    <h3><span class="fa fa-search fa-fw fa-2x"></span> Advanced search</h3>
+                  <div class="row">
+                    <div class="col-sm-6 col-sm-offset-2">
+                      <h3><span class="fa fa-search fa-fw fa-2x"></span> Advanced search</h3>
 
-                    <form action="#" method="post" id="searchForm">
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="age" name="age" placeholder="Age" />
-                      </div>
-                      <div class="form-group">
-                        <select class="form-control">
-                          <option>Nationality</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <select class="form-control">
-                          <option>Gender</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <select class="form-control">
-                          <option>Marital Status</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <select class="form-control">
-                          <option>Language</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <select class="form-control">
-                          <option>Type</option>
-                        </select>
-                      </div>
+                      <form action="#" method="post" id="searchForm">
+                        <div class="form-group">
+                          <select class="form-control">
+                            <option>عمر </option>
+                            <option value="18-25">18-25</option>
+                            <option value="25-35">25-35</option>
+                            <option value="35-45">35-45</option>
+                            <option value="45-55">45-55</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <select class="form-control">
+                            <option>الجنس</option>
+                            <option value="انثى">انثى</option>
+                            <option value="ذكر">ذكر</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <select class="form-control">
+                            <option>الجنسية</option>
+                            <option value="الهند">الهند</option>
+                            <option value="الفلبين">الفلبين</option>
+                            <option value="ملاوي">ملاوي</option>
+                            <option value="بنين">بنين</option>
+                            <option value="تشاد">تشاد</option>
+                            <option value="نيبال">نيبال</option>
+                            <option value="سيريلانكا">سيريلانكا</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <select class="form-control">
+                            <option>الديانة</option>
+                            <option value="اخرى">اخرى</option>
+                            <option value="مسيحي">مسيحي</option>
+                            <option value="مسلم">مسلم</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <select class="form-control">
+                            <option>الحالة الاجتماعية</option>
+                            <option value="متزوج">متزوج</option>
+                            <option value="أعزب">أعزب</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <select class="form-control">
+                            <option>اللغات المتحدث بها</option>
+                            <option value="اخرى">اخرى</option>
+                            <option value="فرنسي">فرنسي</option>
+                            <option value="انجليزي">انجليزي</option>
+                            <option value="عربي">عربي</option>
+                          </select>
+                        </div>
 
-                      <div class="form-group">
-                         <input type="submit" value="Search" class="btn btn-default" id="submitSearchForm" />
-                      </div>
-                    </form>
+                        <div class="form-group">
+                           <input type="submit" value="Search" class="btn btn-default" id="submitSearchForm" />
+                        </div>
+                      </form>
 
+                    </div>
                   </div>
 
                 </div>
