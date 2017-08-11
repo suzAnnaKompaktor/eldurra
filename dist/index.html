@@ -115,7 +115,7 @@
                  <li>لدينا فروع في كل محافظات الكويت بالجمعيات التعاونية، ولدينا مكاتب في عدد من دول العالم.</li>
                  <li>
 "سوق الدرة" يقدم لك باقة متنوعة من اليونيفورم وكافة احتياجات العمالة. </li>
-                <li>من خلال موقعنا هذا يمكن تقديم طلب استقدام العمالة وإنهاء كافة الإجراءات إلكترونياً (أون لاين) .. كما نتيح للكفيل استخراج الفيزا "أون لاين".</li>
+                <li>من خلال موقعنا هذا يمكن تقديم طلب استقدام العمالة وإنهاء كافة الإجراءات إلكترونياً (أون لاين) .. ك</li>
               </ul>
             </div>
           </div>
@@ -215,8 +215,16 @@
 
                       <form action="#" method="post" id="searchForm">
                         <div class="form-group">
+                        <select class="form-control">
+                            <option>نوع العامل</option>
+                            <option value="مربية">مربية</option>
+                            <option value="سائق">سائق</option>
+                            <option value="طباخ">طباخ</option>
+                            <option value="عامل منزلي">عامل منزلي</option>
+                          </select>
+                        </div>
                           <select class="form-control">
-                            <option>عمر </option>
+                            <option>العمر</option>
                             <option value="18-25">18-25</option>
                             <option value="25-35">25-35</option>
                             <option value="35-45">35-45</option>
@@ -268,7 +276,7 @@
                         </div>
 
                         <div class="form-group">
-                           <input type="submit" value="Search" class="btn btn-default" id="submitSearchForm" />
+                           <input type="submit" value="بحث" class="btn btn-default" id="submitSearchForm" />
                         </div>
                       </form>
 
@@ -388,19 +396,19 @@
 
                       <form action="/" method="post" id="loginForm" class="form-primary">
                         <div class="form-group">
-                          <input type="text" class="form-control" id="username" name="username" placeholder="Username" />
+                          <input type="text" class="form-control" id="username" name="username" placeholder="اسم المستخدم" />
                         </div>
                         <div class="form-group">
-                          <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+                          <input type="password" class="form-control" id="password" name="password" placeholder="كلمه السر" />
                         </div>
                         <div class="form-group text-right">
-                          <a href="#" class="forgot-password" data-toggle="modal" data-target="#modalForgotPass">Forgot Password</a>
+                          <a href="#" class="forgot-password" data-toggle="modal" data-target="#modalForgotPass">هل نسيت كلمة المرور</a>
                         </div>
                         <div class="form-group">
-                           <input type="submit" value="Login" class="btn btn-primary" id="submitLoginForm" />
+                           <input type="submit" value="تسجيل الدخول" class="btn btn-primary" id="submitLoginForm" />
                         </div>
                         <div class="form-group">
-                          <a href="#tabRegister" class="btn btn-primary" data-toggle="tab">Register</a>
+                          <a href="#tabRegister" class="btn btn-primary" data-toggle="tab">تسجيل</a>
                         </div>
                       </form>
                     </div>
@@ -420,10 +428,13 @@
                           <input type="text" class="form-control" id="reglastname" name="reglastname" placeholder="Last Name" required="true" />
                         </div>
                         <div class="form-group required">
-                          <input type="text" class="form-control" id="regusername" name="regusername" placeholder="Username" required="true" />
+                          <input type="text" class="form-control" id="regusername" name="regusername" placeholder="اسم المستخدم" required="true" />
                         </div>
                         <div class="form-group required">
-                          <input type="password" class="form-control" id="regpassword" name="regpassword" placeholder="Password" required="true" />
+                          <input type="text" class="form-control" id="regclientid" name="regclientid" placeholder="اسم المستخدم" required="true" />
+                        </div>
+                        <div class="form-group required">
+                          <input type="password" class="form-control" id="regpassword" name="regpassword" placeholder="كلمه السر" required="true" />
                         </div>
                         <div class="form-group required">
                           <input type="password" class="form-control" id="regconfirmpassword" name="regconfirmpassword" placeholder="Confirm Password" required="true" />
