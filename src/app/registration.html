@@ -70,14 +70,14 @@
                 <div role="tabpanel" class="tab-pane fade in active" id="tabRegister">
                   <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                      <h3>Registration</h3>
+                      <h3>التسجيل</h3>
 
                       <form action="#" method="post" id="registrationForm" class="form-primary">
                         <div class="form-group required">
-                          <input type="text" class="form-control" id="regfirstname" name="regfirstname" placeholder="First Name" required="true" />
+                          <input type="text" class="form-control" id="regfirstname" name="regfirstname" placeholder="الاسم الاول" required="true" />
                         </div>
                         <div class="form-group required">
-                          <input type="text" class="form-control" id="reglastname" name="reglastname" placeholder="Last Name" required="true" />
+                          <input type="text" class="form-control" id="reglastname" name="reglastname" placeholder="اسم العائلة" required="true" />
                         </div>
                         <div class="form-group required">
                           <input type="text" class="form-control" id="regusername" name="regusername" placeholder="اسم المستخدم" required="true" />
@@ -89,14 +89,14 @@
                           <input type="password" class="form-control" id="regpassword" name="regpassword" placeholder="كلمه السر" required="true" />
                         </div>
                         <div class="form-group required">
-                          <input type="password" class="form-control" id="regconfirmpassword" name="regconfirmpassword" placeholder="Confirm Password" required="true" />
+                          <input type="password" class="form-control" id="regconfirmpassword" name="regconfirmpassword" placeholder="تأكيد كلمة المرور" required="true" />
                         </div>
                         <div class="form-group required">
-                          <input type="email" class="form-control" id="regemail" name="regemail" placeholder="Email" required="true" />
+                          <input type="email" class="form-control" id="regemail" name="regemail" placeholder="البريد الإلكتروني" required="true" />
                         </div>
 
                         <div class="form-group">
-                           <input type="submit" value="Create" class="btn btn-primary" id="submitRegistrationForm" />
+                           <input type="submit" value="خلق" class="btn btn-primary" id="submitRegistrationForm" />
                         </div>
                       </form>
                     </div>
@@ -116,7 +116,7 @@
     <footer class="footer">
       <div class="footer-inner">
         <div class="container">
-          <div class="copyright pull-left">2017  -  All rights reserved</div>
+          <div class="copyright pull-left">2017  -  كل الحقوق محفوظة</div>
           <div class="pull-right"><a href="#" class="facebook">FACEBOOK</a></div>
         </div>
       </div>
@@ -126,13 +126,13 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <button type="button" class="close" data-dismiss="modal" aria-label="غلق"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
             <div class="modal-icon"><img src="./images/icon_lock.png" class="icon" /></div>
-            <p><small>You are logged in</small></p>
-            <h4>Create your own password</h4>
-            <a href="#tabNewPass" data-toggle="tab" data-dismiss="modal">Continue</a>
+            <p><small>لقد سجلت الدخول</small></p>
+            <h4>إنشاء كلمة المرور</h4>
+            <a href="#tabNewPass" data-toggle="tab" data-dismiss="modal">واصل</a>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -142,13 +142,13 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <button type="button" class="close" data-dismiss="modal" aria-label="غلق"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
-            <h4>Fill in your registered email address to reset your password</h4>
+            <h4>ملء البريد الإلكتروني المسجل</h4>
            <form action="#" method="post" id="forgotPassForm">
               <div class="form-group">
-                <input type="text" class="form-control" id="forgotPassEmail" name="email" placeholder="Email" />
+                <input type="text" class="form-control" id="forgotPassEmail" name="email" placeholder="البريد الإلكتروني" />
               </div>
               <div class="form-group">
                  <input type="submit" value="Submit" class="btn btn-default" id="submitForgotPassForm" data-dismiss="modal" />

@@ -35,6 +35,15 @@ module.exports = function(grunt) {
                     dest: '<%= config.path.app.root %>/libraries/bootstrap/bootstrap.js'
                 }
             ]
+        },
+        prod: {
+            files: [{
+                expand : true,
+                dot    : false,
+                cwd    : '<%= config.path.app.root %>',
+                dest   : '<%= config.path.dist.root %>',
+                src    : [ '*.html', 'images/{,*/}*.*', 'fonts/{,*/}*.*', 'js/{,*/}*.*', 'libraries/{,*/}*.*' ]
+            }]
         }
     },
     less: {
@@ -60,6 +69,10 @@ module.exports = function(grunt) {
       less: {
         files: ['<%= config.path.app.root %>/less/*'],
         tasks: ['less']
+      },
+      prod: {
+        files: ['<%= config.path.app.root %>**/*'],
+        tasks: ['copy:prod']
       }
     }
   });
@@ -71,6 +84,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('default', ['copy', 'less', 'watch', 'cssmin']);
+  grunt.registerTask('default', ['copy', 'less', 'watch:less', 'watch:prod', 'cssmin']);
 
 };
