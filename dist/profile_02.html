@@ -66,33 +66,50 @@
          <div class="section-content">
             <div class="content-wrapper">
                <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active" id="tabSearchResults">
+                <div role="tabpanel" class="tab-pane fade in active" id="tabProfile">
                   <div class="row">
                     <div class="col-md-8 col-sm-offset-2">
-                      <h3><span class="fa fa-search fa-fw fa-2x"></span> نتائج البحث المتقدمة</h3>
-                      <p>الرجاء اختيار عامل واحد</p>
-                      <table class="table table-bordered table-hover">
-                        <tbody>
-                          <tr>
-                            <td><a href="profile.html">اسم</a></td>
-                            <td>نوع العامل</td>
-                            <td>جنس</td>
-                            <td>متاح</td>
-                          </tr>
-                          <tr>
-                            <td><a href="profile_02.html">اسم</a></td>
-                            <td>نوع العامل</td>
-                            <td>جنس</td>
-                            <td>متاح</td>
-                          </tr>
-                          <tr>
-                            <td><a href="profile_03.html">اسم</a></td>
-                            <td>نوع العامل</td>
-                            <td>جنس</td>
-                            <td>متاح</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                      <h3>نافيد عبد القادر أنصاري </h3>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <table class="table">
+                            <tbody>
+                              <tr>
+                                <td>تاريخ الميلاد</td>
+                                <td>01/01/1993</td>
+                              </tr>
+                              <tr>
+                                <td>الجنسية</td>
+                                <td>الهند</td>
+                              </tr>
+                              <tr>
+                                <td>الحالة الإجتماعية</td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>اللغات المتحدث بها</td>
+                                <td>الإنجليزية – اوردو – الهندية</td>
+                              </tr>
+                              <tr>
+                                <td>الوظيفة</td>
+                                <td>طباخ</td>
+                              </tr>
+                              <tr>
+                                <td>سنوات الخبره</td>
+                                <td>4 سنوات</td>
+                              </tr>
+                               <tr>
+                                <td>تفاصيل الخبره</td>
+                                <td>4 سنوات في الهند</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="col-sm-6"><p><img src="./images/profiles/image2.png" class="img-thumbnail img-responsive" width="100%" /></p></div>
+                      </div>
+                      <form action="./submitprofile.html">
+                        <p><input type="submit" value="سجل" class="btn btn-default" id="bookProfile" /></p>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -114,6 +131,43 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalLogin">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="غلق"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-icon"><img src="./images/icon_lock.png" class="icon" /></div>
+            <p><small>لقد سجلت الدخول</small></p>
+            <h4>إنشاء كلمة المرور</h4>
+            <a href="#tabNewPass" data-toggle="tab" data-dismiss="modal">واصل</a>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalForgotPass">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="غلق"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <h4>ملء البريد الإلكتروني المسجل</h4>
+           <form action="#" method="post" id="forgotPassForm">
+              <div class="form-group">
+                <input type="text" class="form-control" id="forgotPassEmail" name="email" placeholder="البريد الإلكتروني" />
+              </div>
+              <div class="form-group">
+                 <input type="submit" value="Submit" class="btn btn-default" id="submitForgotPassForm" data-dismiss="modal" />
+              </div>
+            </form>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
   <script src="./libraries/jquery/jquery.js"></script>
   <script src="./libraries/bootstrap/bootstrap.js"></script>
